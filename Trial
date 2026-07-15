@@ -1,0 +1,32 @@
+.github/workflows/deploy.yml
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master # Triggers the build whenever you push to your main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-node-version: 8 # Matches the legacy Angular 4 environment
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Angular App
+        run: node_modules/.bin/ng build --prod --base-href /MYANTS/
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # Deploys the compiled folder automatically
+          branch: gh-pages
