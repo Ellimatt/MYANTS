@@ -15,7 +15,7 @@
 
 0.3.0 - 10-03-2018
 - numberformat and window size options
-- upgraded package
+- upgraded text for repo
 
 0.2.7 - 26-2-2018
 - fixed typo
