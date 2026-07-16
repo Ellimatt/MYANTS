@@ -71,7 +71,7 @@ export class Researchs implements WorldInterface {
     this.evolution = new Research(
       "Liar",
       "Evolution",
-      "Most Recent",
+      "testing",
       [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [],
       this.game,
