@@ -62,7 +62,7 @@ export class Researchs implements WorldInterface {
       "biResea",
       "Business Intelligence",
       "See who produces or consumes your resources.",
-      [new Cost(this.game.baseWorld.science, new Decimal(2e3))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1)],
       [],
       this.game
     );
@@ -72,14 +72,14 @@ export class Researchs implements WorldInterface {
       "Liar",
       "Evolution",
       "Most Recent",
-      [new Cost(this.game.baseWorld.science, new Decimal(10000000000000000000000000000000000000000000000000000000000000000000000))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [],
       this.game,
       () => {
         this.game.world.toUnlock.forEach(
           t => (t.basePrice = t.basePrice.times(0.01))
         );
-        this.game.world.experience = this.game.world.experience.times(10000000);
+        this.game.world.experience = this.game.world.experience.times(10000000000000000000000000000000);
       }
     );
 
@@ -88,7 +88,7 @@ export class Researchs implements WorldInterface {
       "escapee",
       "scpsm",
       "Reduce a new world.",
-      [new Cost(this.game.baseWorld.science, new Decimal(5e10))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [],
       this.game,
       () => {
@@ -104,7 +104,7 @@ export class Researchs implements WorldInterface {
       "adaptation",
       "Adaptation",
       "Reduce the resources need to travel to a new world by 20+ zeros.",
-      [new Cost(this.game.baseWorld.science, new Decimal(5e8))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.escape],
       this.game,
       () => {
@@ -120,7 +120,7 @@ export class Researchs implements WorldInterface {
       "timeWarp",
       "Time warp",
       "Lot's hours of update.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1000000000000000))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [],
       this.game,
       () => {
@@ -133,7 +133,7 @@ export class Researchs implements WorldInterface {
       "OB",
       "OB2",
       "LOT more experience. And It Worked!",
-      [new Cost(this.game.baseWorld.science, new Decimal(1e12))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [],
       this.game,
       () => {
@@ -146,7 +146,7 @@ export class Researchs implements WorldInterface {
       "hereAndNow",
       "Here and Now",
       "Get 10% world experience, min 10.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1e9))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.timeWarp, this.hereAndNow2],
       this.game,
       () => {
@@ -165,7 +165,7 @@ export class Researchs implements WorldInterface {
       "depEduRes",
       "Department of Education",
       "Unlock Department of Education.",
-      [new Cost(this.game.baseWorld.science, new Decimal(3e10))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.science.depEdu],
       this.game
     );
@@ -175,7 +175,7 @@ export class Researchs implements WorldInterface {
       "advancedLesson",
       "Advanced Lesson",
       "University also produces scientist.",
-      [new Cost(this.game.baseWorld.science, new Decimal(3e6))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.science.scientistProduction, this.depEduRes],
       this.game
     );
@@ -195,7 +195,7 @@ export class Researchs implements WorldInterface {
       "University",
       "University",
       "Unlock university.",
-      [new Cost(this.game.baseWorld.science, new Decimal(6e4))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.science.university, this.publicLesson],
       this.game
     );
@@ -205,7 +205,7 @@ export class Researchs implements WorldInterface {
       "scientificMethod",
       "Scientific Method",
       "Science production +100%",
-      [new Cost(this.game.baseWorld.science, new Decimal(4e3))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.universityRes],
       this.game
     );
@@ -220,7 +220,7 @@ export class Researchs implements WorldInterface {
       "departementsRes",
       "Departments",
       "Departments yield engineers.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1e11))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       deps,
       this.game
     );
@@ -231,7 +231,7 @@ export class Researchs implements WorldInterface {
       "engineerRes",
       "Engineer",
       "Engineer will slowly build machinery.",
-      [new Cost(this.game.baseWorld.science, new Decimal(3e6))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       eng.concat(this.departmentRes),
       this.game
     );
@@ -251,7 +251,7 @@ export class Researchs implements WorldInterface {
       "hydroRes",
       "Hydroponics",
       "Hydroponics is the art of growing plants without soil.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1e4))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.baseWorld.hydroAnt],
       this.game
     );
@@ -261,7 +261,7 @@ export class Researchs implements WorldInterface {
       "lasRes",
       "Laser",
       "Sand can be fused to crystal.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1e4))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.baseWorld.laserAnt],
       this.game
     );
@@ -271,7 +271,7 @@ export class Researchs implements WorldInterface {
       "refRes",
       "Refinery",
       "Soil can be refined to sand.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1e4))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.baseWorld.refineryAnt],
       this.game
     );
@@ -281,7 +281,7 @@ export class Researchs implements WorldInterface {
       "compRes",
       "Compost",
       "Wood can be degraded to fertile soil.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1e4))],
+      [new Cost(this.game.baseWorld.science, new Decimal(11))],
       [this.game.baseWorld.composterAnt],
       this.game
     );
@@ -291,7 +291,7 @@ export class Researchs implements WorldInterface {
       "experimentRes",
       "Experiment",
       "Unlocks scientist Ant",
-      [new Cost(this.game.baseWorld.science, new Decimal(800))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.science.scientist, this.scientificMethod],
       this.game
     );
@@ -301,7 +301,7 @@ export class Researchs implements WorldInterface {
       "prestigeRes",
       "Travel",
       "Allows you to move to new worlds",
-      [new Cost(this.game.baseWorld.science, new Decimal(1e7))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.hereAndNow, this.adaptation, this.evolution],
       this.game,
       () => {
@@ -316,7 +316,7 @@ export class Researchs implements WorldInterface {
       "machiRes",
       "Machinery",
       "Unlocks powerful machinery.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1e6))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       listM,
       this.game
     );
@@ -326,7 +326,7 @@ export class Researchs implements WorldInterface {
       "speRes",
       "Technology",
       "Allows you to research new technologies.",
-      [new Cost(this.game.baseWorld.science, new Decimal(3e3))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [
         this.composterResearch,
         this.refineryResearch,
@@ -346,7 +346,7 @@ export class Researchs implements WorldInterface {
       "upComb",
       "Combined bonus",
       "This is the ultimate bonus: multiply unit's bonus per hire bonus.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1e10))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [],
       this.game
     );
