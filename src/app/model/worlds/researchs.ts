@@ -70,9 +70,9 @@ export class Researchs implements WorldInterface {
     //    Evolution
     this.evolution = new Research(
       "Liar",
-      "Eveeveelution",
-      "I don't know if you can see this text",
-      [new Cost(this.game.baseWorld.science, new Decimal(10000000))],
+      "Evolution",
+      "Most Recent",
+      [new Cost(this.game.baseWorld.science, new Decimal(10000000000000000000000000000000000000000000000000000000000000000000000))],
       [],
       this.game,
       () => {
@@ -87,13 +87,13 @@ export class Researchs implements WorldInterface {
     this.escape = new Research(
       "escapee",
       "scpsm",
-      "Reduce a new world by 10000.",
+      "Reduce a new world.",
       [new Cost(this.game.baseWorld.science, new Decimal(5e10))],
       [],
       this.game,
       () => {
         this.game.world.toUnlock.forEach(
-          t => (t.basePrice = t.basePrice.div(10000))
+          t => (t.basePrice = t.basePrice.div(100000000000000000000000000000000000000000))
         );
         // this.game.world.toUnlockMax.forEach(t => t.basePrice = t.basePrice.times(4))
       }
@@ -103,13 +103,13 @@ export class Researchs implements WorldInterface {
     this.adaptation = new Research(
       "adaptation",
       "Adaptation",
-      "Reduce the resources need to travel to a new world by 20.",
+      "Reduce the resources need to travel to a new world by 20+ zeros.",
       [new Cost(this.game.baseWorld.science, new Decimal(5e8))],
       [this.escape],
       this.game,
       () => {
         this.game.world.toUnlock.forEach(
-          t => (t.basePrice = t.basePrice.div(20))
+          t => (t.basePrice = t.basePrice.div(2000000000000000000000000000000000000000000000000000000))
         );
         //   this.game.world.toUnlockMax.forEach(t => t.basePrice = t.basePrice.times(4))
       }
@@ -120,7 +120,7 @@ export class Researchs implements WorldInterface {
       "timeWarp",
       "Time warp",
       "Lot's hours of update.",
-      [new Cost(this.game.baseWorld.science, new Decimal(100))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1000000000000000))],
       [],
       this.game,
       () => {
@@ -137,7 +137,7 @@ export class Researchs implements WorldInterface {
       [],
       this.game,
       () => {
-        this.game.world.experience = this.game.world.experience.times(1000000);
+        this.game.world.experience = this.game.world.experience.times(10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
       }
     );
 
@@ -150,7 +150,7 @@ export class Researchs implements WorldInterface {
       [this.timeWarp, this.hereAndNow2],
       this.game,
       () => {
-        const ne = Math.max(this.game.world.level * 1000000000000000, 1000000);
+        const ne = Math.max(this.game.world.level * 100000000000000000000000000000000000000000000000000000, 1000000000000000000000000000000000000000);
 
         this.game.prestige.experience.quantity = this.game.prestige.experience.quantity.plus(
           ne
