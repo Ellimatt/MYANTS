@@ -62,7 +62,7 @@ export class Researchs implements WorldInterface {
       "biResea",
       "Business Intelligence",
       "See who produces or consumes your resources.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1)],
+      [new Cost(this.game.baseWorld.science, new Decimal(1)]
       [],
       this.game
     );
