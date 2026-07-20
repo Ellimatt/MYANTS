@@ -141,24 +141,23 @@ export class Researchs implements WorldInterface {
       }
     );
 
-    //    Here and Now
-    this.hereAndNow = new Research(
-      "hereAndNow",
-      "Here and Now",
-      "Get 10% world experience, min 10.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1))],
-      [this.timeWarp, this.hereAndNow2],
-      this.game,
-      () => {
-        const ne = Math.max(this.game.world.level * 100000000000000000000000000000000000000000000000000000, 1000000000000000000000000000000000000000);
+// Here and Now
+this.hereAndNow = new Research(
+  "hereAndNow",
+  "Here and Now",
+  "Gain 1000% AI world experience instantly.",
+  [new Cost(this.game.baseWorld.science, new Decimal(1))],
+  [this.timeWarp, this.hereAndNow2],
+  this.game,
+  () => {
+    // 10x (1000%) world level gain with no floor/minimum restriction
+    const ne = Decimal.fromValue(this.game.world.level).times(100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
 
-        this.game.prestige.experience.quantity = this.game.prestige.experience.quantity.plus(
-          ne
-        );
-        this.game.maxLevel = this.game.maxLevel.plus(ne);
-        this.game.expTabAv = true;
-      }
-    );
+    this.game.prestige.experience.quantity = this.game.prestige.experience.quantity.plus(ne);
+    this.game.maxLevel = this.game.maxLevel.plus(ne);
+    this.game.expTabAv = true;
+  }
+);
 
     //    University 4
     this.depEduRes = new Research(
