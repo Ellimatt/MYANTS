@@ -277,7 +277,7 @@ export class Prestige implements WorldInterface {
           if (!prod.bonusList)
             prod.bonusList = new Array<[Base, decimal.Decimal]>()
 
-          prod.bonusList.push([eff, new Decimal(-0.05)])
+          prod.bonusList.push([eff, new Decimal(-0.09999)])
 
         })
       ))
@@ -307,7 +307,7 @@ export class Prestige implements WorldInterface {
         .forEach(prod => {
           if (!prod.bonusList)
             prod.bonusList = new Array<[Base, decimal.Decimal]>()
-          prod.bonusList.push([eff, new Decimal(-0.05)])
+          prod.bonusList.push([eff, new Decimal(-0.09999)])
         })
       this.effListEng.push(eff)
     })
@@ -334,7 +334,7 @@ export class Prestige implements WorldInterface {
         .forEach(prod => {
           if (!prod.bonusList)
             prod.bonusList = new Array<[Base, decimal.Decimal]>()
-          prod.bonusList.push([eff, new Decimal(-0.05)])
+          prod.bonusList.push([eff, new Decimal(-0.09999)])
         })
       this.effListDep.push(eff)
     })
