@@ -137,7 +137,7 @@ export class Researchs implements WorldInterface {
       [],
       this.game,
       () => {
-        this.game.world.experience = this.game.world.experience.times(10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
+        this.game.world.experience = this.game.world.experience.times(10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
       }
     );
 
@@ -185,7 +185,7 @@ export class Researchs implements WorldInterface {
       "publicLesson",
       "Public Lesson",
       "University also produces students.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1e5))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.science.studentProduction, this.advancedLesson],
       this.game
     );
@@ -241,7 +241,7 @@ export class Researchs implements WorldInterface {
       "planRes",
       "Planting",
       "Tree planting is the process of transplanting tree seedlings.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1e4))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.baseWorld.planterAnt],
       this.game
     );
@@ -281,7 +281,7 @@ export class Researchs implements WorldInterface {
       "compRes",
       "Compost",
       "Wood can be degraded to fertile soil.",
-      [new Cost(this.game.baseWorld.science, new Decimal(11))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.baseWorld.composterAnt],
       this.game
     );
@@ -360,7 +360,7 @@ export class Researchs implements WorldInterface {
       "R4",
       "Twin",
       "Allows you to get more units for the same price.",
-      [new Cost(this.game.baseWorld.science, new Decimal(7e3))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       allUpH,
       this.game
     );
@@ -374,7 +374,7 @@ export class Researchs implements WorldInterface {
       "R2",
       "Teamworking 2",
       "Upgration bonus.",
-      [new Cost(this.game.baseWorld.science, new Decimal(5))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       allUp,
       this.game
     );
@@ -384,7 +384,7 @@ export class Researchs implements WorldInterface {
       "RUp1",
       "Teamwork",
       "Gives a production bonus based on how many times you have bought a unit.",
-      [new Cost(this.game.baseWorld.science, new Decimal(50))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.r2],
       this.game
     );
@@ -394,7 +394,7 @@ export class Researchs implements WorldInterface {
       "HuntR2",
       "Advanced Hunting",
       "Equip ants with better weapons.",
-      [new Cost(this.game.baseWorld.science, new Decimal(4000))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.baseWorld.advancedHunter],
       this.game
     );
@@ -404,7 +404,7 @@ export class Researchs implements WorldInterface {
       "HuntR1",
       "Hunting",
       "Equip ants with weapons to get food.",
-      [new Cost(this.game.baseWorld.science, new Decimal(2000))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.baseWorld.hunter, hunting2, this.specialResearch],
       this.game
     );
@@ -414,7 +414,7 @@ export class Researchs implements WorldInterface {
       "WR1",
       "Woodcutting",
       "Allows you to collect wood for future usage.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1000))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.baseWorld.lumberjack, hunting],
       this.game
     );
@@ -424,7 +424,7 @@ export class Researchs implements WorldInterface {
       "R3",
       "Fungus experiments",
       "Allows you to do experiments to increase fungus's food production.",
-      [new Cost(this.game.baseWorld.science, new Decimal(1000))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.baseWorld.fungus.upSpecial],
       this.game
     );
@@ -434,7 +434,7 @@ export class Researchs implements WorldInterface {
       "R1",
       "Ant–fungus symbiosis",
       "Allows you to cultivate fungus. Fungus is a source of food.",
-      [new Cost(this.game.baseWorld.science, new Decimal(-10000000))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.baseWorld.farmer, r3, woodcutting],
       this.game
     );
@@ -444,7 +444,7 @@ export class Researchs implements WorldInterface {
       "RDirt",
       "LottaDirt",
       "Allows Dirt AKA DIRT",
-      [new Cost(this.game.baseWorld.science, new Decimal(5))],
+      [new Cost(this.game.baseWorld.science, new Decimal(1))],
       [this.game.baseWorld.soil, this.game.baseWorld.carpenter, r1, this.up1],
       this.game
     );
